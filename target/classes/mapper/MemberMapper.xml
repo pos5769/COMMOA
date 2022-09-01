@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- namespace는 현재 파일에 정의된 SQL문 집합의 고유한 이름 -->
+<!-- 보통은 SQL문을 실행할 Dao 인터페이스 이름으로 설정 -->
+<mapper namespace="com.kopo.commoa.mapper.MemberMapper">
+	<resultMap type="memberVo" id="memMap"> 
+		<!-- resultMap의 type에도 typeAliases 별명으로 써도 되고 안써도 됨. -->
+		<!-- PK컬럼은 result 태그 대신 id 태그를 사용. (result태그써도 기능에 큰 상관은없지만, 조인할때 등 id태그로 알려주면 좋음. -->
+		<id property="mngMemId" column="Mng_Mem_ID" />
+		<result property="memId" column="Mem_ID" />
+		<result property="memPassword" column="Mem_Password" />
+		<result property="name" column="Name" />
+		<result property="email" column="Email" />
+		<result property="phone" column="Phone" />
+		<result property="registFrstDate" column="Regist_Frst_Date" />
+		<result property="zipCode" column="Zipcode" />
+		<result property="address" column="Address" />
+		<result property="pwHint" column="Pw_Hint" />
+		<result property="pwAns" column="Pw_Ans" />
+	</resultMap>
+	
+	<select id="selectMemberList" resultType="MemberVo">  
+    SELECT Mng_Mem_ID, Mem_ID, Mem_Password 
+    FROM Member
+  </select>
+  
+
+</mapper>
+
