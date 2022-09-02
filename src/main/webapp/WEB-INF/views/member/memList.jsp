@@ -14,6 +14,7 @@
 
 <c:forEach var="vo" items="${list}">
 	<c:out value="${vo.memId}" /> 
+	<br/>
 </c:forEach>
 
 </body>

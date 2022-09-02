@@ -19,5 +19,11 @@ public class MemberServiceImpl implements MemberService {
 	public List<MemberVo> selectMemberList() {
 		return memberMapper.selectMemberList();
 	}
+	
+	//회원추가
+	@Override
+	public int memberInsert(MemberVo vo) {
+		return memberMapper.memberInsert(vo); 
+	}
 
 }

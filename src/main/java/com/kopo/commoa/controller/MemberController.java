@@ -32,11 +32,17 @@ public class MemberController {
 		return "member/memList";
 	}
 	
-	//회원추가
+	//회원추가폼
+	@GetMapping(path = "/join")
+	public String memberInsertForm() throws Exception {
+		return "member/memberRegist";
+	}
+	
+	//회원추가하기
 	@PostMapping(path = "/join")
-	public String Memberinsert() throws Exception {
-		
-		return "home";
+	public String memberInsert(MemberVo vo) throws Exception {
+		int num = memberService.memberInsert(vo);
+		return "redirect:/memberList";
 	}
 	
 	

@@ -11,5 +11,7 @@ public interface MemberMapper {
 	
 	//회원목록
 	List<MemberVo> selectMemberList();
+	//회원추가
+	int memberInsert(MemberVo vo);
 	
 }

@@ -24,7 +24,14 @@
 	<select id="selectMemberList" resultType="memberVo">  
     SELECT Mng_Mem_ID, Mem_ID, Mem_Password 
     FROM com_Member
-  </select>
+    </select>
+    
+    <insert id="memberInsert">
+    insert into com_Member 
+	(Mng_Mem_ID, Mem_ID, Name, Mem_Password)
+	values 
+	(#{mngMemId}, #{memId}, #{name}, #{memPassword})
+    </insert>
   
 
 </mapper>
