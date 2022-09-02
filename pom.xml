@@ -2,7 +2,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-<<<<<<< HEAD
 	<groupId>com.kopo</groupId> <!-- 회사 도메인 이름 -->
 	<artifactId>commoa</artifactId> 
 	<name>commoa</name> <!-- 프로젝트 이름 -->
@@ -187,6 +186,14 @@
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
 		    <version>2.13.3</version>
+		</dependency>
+		
+		<!-- lombok 라이브러리 -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>1.18.24</version>
+			<scope>provided</scope>
 		</dependency>
 		
 		<!-- 메이븐이 빌드할 때 사용되는 라이브러리 -->
