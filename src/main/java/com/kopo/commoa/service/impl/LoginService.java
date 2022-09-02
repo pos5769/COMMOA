@@ -5,6 +5,7 @@ import java.security.MessageDigest;
 public interface LoginService {
 	
 	//고유아이디 로그인 처리
+	public logination
 	
 	//일반 로그인 처리
 	
