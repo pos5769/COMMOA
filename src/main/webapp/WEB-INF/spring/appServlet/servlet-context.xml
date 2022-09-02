@@ -26,23 +26,8 @@
 	<context:component-scan base-package="com.kopo.commoa" />
 	
 	
-	<!-- 데이터베이스 연결을 관리하는 커넥션풀로서 DBCP를 등록 -->
-	<!-- DB연결을 위해 DB 정보를 알려줌. -->	
-	<!-- mysql -->
-	<beans:bean id="dataSource-mysql" class="org.apache.commons.dbcp2.BasicDataSource" destroy-method="close">
-		<beans:property name="driverClassName" value="net.sf.log4jdbc.DriverSpy" /> 
-		<beans:property name="url" value="jdbc:mysql://127.0.0.1:3306/homepage_db" />
-		<beans:property name="username" value="homepage_user" />
-		<beans:property name="password" value="homepage_pass" />
-	</beans:bean>
-	
-	<!-- namespace에서 설정을 안해줬기때문에 bean 태그 그대로 가져오면 오류가 뜸. beans: 를 붙여준다. -->
-	<!-- MyBatis 본체를 등록 (커넥션을 제공하는 객체와 설정파일 위치를 설정 -->
-	<beans:bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-	  <beans:property name="dataSource" ref="ds" />		<!-- 커넥션을 위해 db 정보를 알려줌 -->
-	  <beans:property name="configLocation" value="classpath:/mybatis/mybatis-config.xml" /> 
-	  <!-- 설정파일 위치->경로를 알려줌. /exspring/src/main/resources -> 클래스패스 -->
-	</beans:bean>
+
+
 	
 	<!-- com.exam.exspring.member 패키지 아래에 존재하는 @Mapper 애노테이션이 적용된 인터페이스를 찾아서, 
 	마이바티스를 실행하는 그 인터페이스의 구현체를 자동 생성하여 스프링에 등록  -->

@@ -11,5 +11,5 @@ public interface MemberMapper {
 	
 	//회원목록
 	List<MemberVo> selectMemberList();
-
+	
 }

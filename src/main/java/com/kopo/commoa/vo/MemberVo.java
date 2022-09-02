@@ -2,6 +2,11 @@ package com.kopo.commoa.vo;
 
 import java.util.Date;
 
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
 public class MemberVo {
 	
 	//고유ID

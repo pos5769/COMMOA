@@ -21,9 +21,9 @@
 		<result property="pwAns" column="Pw_Ans" />
 	</resultMap>
 	
-	<select id="selectMemberList" resultType="MemberVo">  
+	<select id="selectMemberList" resultType="memberVo">  
     SELECT Mng_Mem_ID, Mem_ID, Mem_Password 
-    FROM Member
+    FROM com_Member
   </select>
   
 

@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.kopo.commoa</groupId> <!-- 회사 도메인 이름 -->
+	<groupId>com.kopo</groupId> <!-- 회사 도메인 이름 -->
 	<artifactId>commoa</artifactId> 
 	<name>commoa</name> <!-- 프로젝트 이름 -->
 	<packaging>war</packaging> 

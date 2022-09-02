@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.kopo.commoa.mapper.MemberMapper;
+import com.kopo.commoa.service.MemberService;
 import com.kopo.commoa.vo.MemberVo;
 
 @Service

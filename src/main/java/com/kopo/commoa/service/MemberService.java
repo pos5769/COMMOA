@@ -1,4 +1,4 @@
-package com.kopo.commoa.service.impl;
+package com.kopo.commoa.service;
 
 import java.util.List;
 

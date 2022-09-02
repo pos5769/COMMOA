@@ -3,12 +3,16 @@ package com.kopo.commoa.controller;
 import java.util.List;
 import java.util.Map;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.kopo.commoa.service.impl.MemberService;
+import com.kopo.commoa.service.MemberService;
 import com.kopo.commoa.vo.MemberVo;
 
 
@@ -20,15 +24,11 @@ public class MemberController {
 	private MemberService memberService;
 	
 	//회원목록
-//	@GetMapping(path = "/memberList")
-//	public String MemberList() throws Exception {
-//		return "home";
-//	}
-	
 	@GetMapping(path = "/memberList")
-	public String list(Map<String,Object> map) throws Exception {	
+	public String list(@ModelAttribute("vo") MemberVo vo, HttpServletRequest req, ModelMap model) throws Exception {	
 		List<MemberVo> list = memberService.selectMemberList();  
-		map.put("memList", list);
+		model.addAttribute("list", list);
+		System.out.println("controller: " + list.size()); 
 		return "member/memList";
 	}
 	
